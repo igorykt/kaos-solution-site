@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaos Solution</title>
+<meta name="description" content="Aplicativos feitos por Kaos Solution.">
+<link rel="icon" href="/bloco-de-contas/icone.png" type="image/png">
+<style>
+  :root {
+    --papel: #FBF3DE;
+    --folha: #FFFCF2;
+    --pauta: rgba(124, 165, 216, 0.30);
+    --margem: #D9736B;
+    --tinta: #22365F;
+    --tinta-media: #4A5C85;
+    --tinta-fraca: #7C88A3;
+    --borda: rgba(34, 54, 95, 0.16);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --papel: #171A21;
+      --folha: #1D212A;
+      --pauta: rgba(124, 165, 216, 0.12);
+      --margem: #C9655E;
+      --tinta: #E8E3D5;
+      --tinta-media: #AFB6C6;
+      --tinta-fraca: #7E879B;
+      --borda: rgba(232, 227, 213, 0.16);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--papel);
+    background-image: repeating-linear-gradient(to bottom, transparent 0 35px, var(--pauta) 35px 36px);
+    color: var(--tinta);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .pagina {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 72px 28px 96px 56px;
+    position: relative;
+  }
+
+  .pagina::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 28px;
+    width: 2px;
+    background: var(--margem);
+    opacity: 0.7;
+  }
+
+  h1 { font-size: 2rem; margin: 0 0 6px; letter-spacing: -0.4px; }
+  .sub { color: var(--tinta-media); margin: 0 0 48px; }
+
+  h2 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--tinta-fraca);
+    margin: 0 0 14px;
+  }
+
+  .app {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    background: var(--folha);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 18px 20px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .app img { width: 64px; height: 64px; border-radius: 14px; flex: none; }
+  .app h3 { margin: 0 0 2px; font-size: 1.15rem; }
+  .app p { margin: 0; color: var(--tinta-media); font-size: 0.95rem; }
+
+  .links { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.95rem; }
+  a { color: inherit; text-underline-offset: 3px; }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 18px;
+    border-top: 1px solid var(--borda);
+    color: var(--tinta-fraca);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 560px) {
+    .pagina { padding: 48px 18px 72px 44px; }
+    .pagina::before { left: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="pagina">
+  <h1>Kaos Solution</h1>
+  <p class="sub">Aplicativos pequenos, que fazem bem uma coisa só.</p>
+
+  <h2>Aplicativos</h2>
+  <div class="app">
+    <img src="/bloco-de-contas/icone.png" alt="Ícone do Bloco de Contas">
+    <div>
+      <h3>Bloco de Contas</h3>
+      <p>Anote contas como no papel: um valor, uma descrição, e o saldo sai pronto.</p>
+    </div>
+  </div>
+  <div class="links">
+    <a href="/bloco-de-contas/privacidade/">Política de privacidade</a>
+  </div>
+
+  <footer>
+    Contato: <a href="mailto:contato@kaos-solution.com.br">contato@kaos-solution.com.br</a>
+  </footer>
+</div>
+</body>
+</html>
